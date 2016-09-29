@@ -1,4 +1,15 @@
 <h1>welcome</h1>
-<%= @ip %>
-<%= @user_agent %>
-<%= log_in_time %>
+<table style="width:100%">
+  <tr>
+    <th>IP</th>
+    <td><%= @ip %></td>
+  </tr>
+  <tr>
+    <th>Agent</th>
+    <td><%= @user_agent %></td>
+  </tr>
+  <tr>
+    <th>Log in Time</th>
+    <td><%= Time.now %></td>
+  </tr>
+</table>
