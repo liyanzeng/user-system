@@ -11,6 +11,11 @@ class UsersController < ApplicationController
       render "new"
     end
   end
+  
+  def index
+    @user_agent = request.user_agent
+    @ip = get_ip
+  end
 
   private
   def user_params
