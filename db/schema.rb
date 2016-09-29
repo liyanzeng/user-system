@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160929022401) do
+ActiveRecord::Schema.define(version: 20160929070856) do
 
   create_table "access_tokens", force: :cascade do |t|
     t.string   "user_name"
@@ -18,6 +18,25 @@ ActiveRecord::Schema.define(version: 20160929022401) do
     t.datetime "expire_in"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "user_agent"
+  end
+
+  create_table "login_logs", force: :cascade do |t|
+    t.string   "user_ip"
+    t.string   "user_agent"
+    t.string   "user_name"
+    t.datetime "log_in_time"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "loginlogs", force: :cascade do |t|
+    t.string   "user_ip"
+    t.string   "user_agent"
+    t.string   "user_name"
+    t.datetime "log_in_time"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "users", force: :cascade do |t|

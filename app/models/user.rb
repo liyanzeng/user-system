@@ -24,4 +24,7 @@ class User < ApplicationRecord
       self.password_hash = BCrypt::Engine.hash_secret(password, password_salt)
     end
   end
+  def generate_authentication_token
+    SecureRandom.uuid
+  end
 end
