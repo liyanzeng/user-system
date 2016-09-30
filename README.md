@@ -5,6 +5,7 @@
 4. 在相应的 views/sessions/new.html.erb 文件中编写登录页面。
 5. 开始实现用户登录.
 6. 写 CSS 覆盖 Rails 默认的登录框，加入背景图片，使登录界面美观。
+<hr/>
 ## 实现 API 功能
 1. 新建两个 api 的 controller，分别为 users controller 和 users_logs controller .
 2. 考虑到可扩展性，实行版本控制，本次版本为 v1.
